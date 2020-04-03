@@ -27,7 +27,114 @@
 .App-link {
   color: #61dafb;
 }
+.container{
+  display: flex;
+  height: 100%;
+}
+.left{
+  child-align: middle;
+}
+.left{
 
+  /*display: inline-block;*/
+  /*background: #61dafb;*/
+  flex: 6;
+}
+.right{
+  /*display: inline-block;*/
+  /*background: yellow;*/
+  float: right;
+  flex: 1;
+}
+/*.img-box:before {*/
+/*  content: "";*/
+/*  display: block;*/
+/*  padding-top: 100%;*/
+/*}*/
+
+.message{
+  font-size: 50px;
+}
+img{
+  /*height: inherit;*/
+  width: 100%;
+}
+.column{
+  /*max-height: 500px;*/
+  flex: 1;
+  /*background: orange;*/
+
+  /*display:flex;*/
+  flex-direction: column-reverse;
+}
+.scene {
+  overflow-y: auto;
+  display:flex;
+  flex: 1;
+  /*background: #67bff2;*/
+}
+.scene *{
+  overflow-y: visible;
+}
+.scene{
+}
+article p{
+  flex: 0;
+}
+/*article::before{*/
+/*  content: '';*/
+/*  position: absolute;*/
+/*  top: 0; right: 0; bottom: 0; left: 0;*/
+/*  z-index: -1;*/
+/*  filter: blur(20px);*/
+/*  margin: -20px;*/
+/*  background: url("./resources/background.jpg") fixed 0 center;*/
+/*  background-size: cover;*/
+/*}*/
+article{
+  background: rgba(255, 255, 255, 0.52);
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.right div,.right span,.left,.right{
+
+  border: 5px ;
+  margin: 10px;
+  padding: 5px;
+}
+#root{
+  background: url("./resources/background.jpg");
+  background-size: cover;
+  background-position: center;
+  /*filter: blur(8px);*/
+}
+#root,body,html{
+  height: 100%;
+
+}
+button {
+  background-color: #67bff2;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+.range {
+  display: block;
+  -webkit-appearance: none;
+  background-color: #c5d7fd;
+  width: 150px;
+  height: 5px;
+  border-radius: 5px;
+  margin: 0 auto;
+  outline: 0;
+}
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
