@@ -2,15 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fe9600eb-eb89-47f8-b265-11d9d118b331" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ai.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/ai.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/model.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scene.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/scene.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,7 +51,7 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path" value="node" />
     <property name="nodejs_package_manager_path" value="yarn" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="settings.github" />
     <property name="ts.external.directory.path" value="$PROJECT_DIR$/node_modules/typescript/lib" />
   </component>
   <component name="RecentsManager">
@@ -160,16 +154,43 @@
       <option name="project" value="LOCAL" />
       <updated>1585965911132</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="添加electron打包功能">
+      <created>1585990438411</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1585990438411</updated>
+    </task>
+    <task id="LOCAL-00004" summary="修改忽略规则">
+      <created>1586005385223</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1586005385223</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="构建react web项目" />
     <MESSAGE value="修复bug" />
-    <option name="LAST_COMMIT_MESSAGE" value="修复bug" />
+    <MESSAGE value="添加electron打包功能" />
+    <MESSAGE value="修改忽略规则" />
+    <option name="LAST_COMMIT_MESSAGE" value="修改忽略规则" />
   </component>
   <component name="WindowStateProjectService">
     <state x="2475" y="187" width="800" height="679" key="#ESLint" timestamp="1585839151647">
@@ -180,10 +201,10 @@
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="2613" y="272" width="524" height="505" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.34.1920.1046/1920.0.1920.1080@1920.0.1920.1080" timestamp="1585884880151" />
-    <state x="2440" y="88" width="870" height="873" key="CommitChangelistDialog2" timestamp="1585965911060">
+    <state x="2440" y="88" width="870" height="873" key="CommitChangelistDialog2" timestamp="1586005385135">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state x="2440" y="88" width="870" height="873" key="CommitChangelistDialog2/0.34.1920.1046/1920.0.1920.1080@1920.0.1920.1080" timestamp="1585965911060" />
+    <state x="2440" y="88" width="870" height="873" key="CommitChangelistDialog2/0.34.1920.1046/1920.0.1920.1080@1920.0.1920.1080" timestamp="1586005385135" />
     <state width="910" height="285" key="GridCell.Tab.0.bottom" timestamp="1585990356464">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
@@ -252,10 +273,14 @@
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="2647" y="218" width="456" height="613" key="RollbackChangesDialog/0.34.1920.1046/1920.0.1920.1080@1920.0.1920.1080" timestamp="1585927734922" />
-    <state x="2361" y="159" width="1037" height="732" key="SettingsEditor" timestamp="1585972088994">
+    <state x="2361" y="159" width="1037" height="732" key="SettingsEditor" timestamp="1586004941577">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state x="2361" y="159" width="1037" height="732" key="SettingsEditor/0.34.1920.1046/1920.0.1920.1080@1920.0.1920.1080" timestamp="1585972088994" />
+    <state x="2361" y="159" width="1037" height="732" key="SettingsEditor/0.34.1920.1046/1920.0.1920.1080@1920.0.1920.1080" timestamp="1586004941577" />
+    <state x="2475" y="260" width="800" height="530" key="Vcs.Push.Dialog.v2" timestamp="1586005598404">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2475" y="260" width="800" height="530" key="Vcs.Push.Dialog.v2/0.34.1920.1046/1920.0.1920.1080@1920.0.1920.1080" timestamp="1586005598404" />
     <state x="2532" y="351" key="com.intellij.ide.util.TipDialog" timestamp="1585919281442">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
