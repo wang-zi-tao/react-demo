@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fe9600eb-eb89-47f8-b265-11d9d118b331" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scene.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/scene.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,6 +37,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="TODO_SCOPE" value="All Places" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="js.last.introduce.type" value="CONST" />
     <property name="node.js.detected.package.eslint" value="true" />
@@ -175,7 +175,14 @@
       <option name="project" value="LOCAL" />
       <updated>1586005998356</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="修改README.md，添加package和electron-start的说明">
+      <created>1586006075192</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1586006075192</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -209,10 +216,10 @@
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="2613" y="272" width="524" height="505" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.34.1920.1046/1920.0.1920.1080@1920.0.1920.1080" timestamp="1585884880151" />
-    <state x="2938" y="156" width="870" height="873" key="CommitChangelistDialog2" timestamp="1586005998294">
+    <state x="2938" y="156" width="870" height="873" key="CommitChangelistDialog2" timestamp="1586006075134">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state x="2938" y="156" width="870" height="873" key="CommitChangelistDialog2/0.34.1920.1046/1920.0.1920.1080@1920.0.1920.1080" timestamp="1586005998294" />
+    <state x="2938" y="156" width="870" height="873" key="CommitChangelistDialog2/0.34.1920.1046/1920.0.1920.1080@1920.0.1920.1080" timestamp="1586006075134" />
     <state width="910" height="285" key="GridCell.Tab.0.bottom" timestamp="1585990356464">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
@@ -285,10 +292,10 @@
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="2361" y="159" width="1037" height="732" key="SettingsEditor/0.34.1920.1046/1920.0.1920.1080@1920.0.1920.1080" timestamp="1586004941577" />
-    <state x="2475" y="260" width="800" height="530" key="Vcs.Push.Dialog.v2" timestamp="1586006023920">
+    <state x="2475" y="260" width="800" height="530" key="Vcs.Push.Dialog.v2" timestamp="1586006151306">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state x="2475" y="260" width="800" height="530" key="Vcs.Push.Dialog.v2/0.34.1920.1046/1920.0.1920.1080@1920.0.1920.1080" timestamp="1586006023920" />
+    <state x="2475" y="260" width="800" height="530" key="Vcs.Push.Dialog.v2/0.34.1920.1046/1920.0.1920.1080@1920.0.1920.1080" timestamp="1586006151306" />
     <state x="2532" y="351" key="com.intellij.ide.util.TipDialog" timestamp="1585919281442">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>

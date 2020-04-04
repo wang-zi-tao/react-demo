@@ -72,11 +72,6 @@ export class Column extends React.Component<{ column: ModelColumn, onClick: any 
     }
 }
 
-// function Column(column:ModelColumn,onClick:MouseEvent=>void:any{
-//     const cells=column.cells
-//     const images=cells.map((cell)=><Cell cell={cell}/>)
-//     return <span className={'column'} onClick={onclick}>{images}</span>
-// }
 interface SceneProps {
     onHumanWin: () => void;
     onAIWin: () => void;
@@ -94,7 +89,7 @@ export class Scene extends React.Component<SceneProps, any> {
     render(): any {
         const model = this.props.model
         const modelColumns = model.columns
-        let columns = []//modelColumns.map((column)=><Column column={column} onClick={}/>)
+        let columns = []
         for (let x = 0; x < modelColumns.length; x++) {
             const modelColumn = modelColumns[x]
             columns.push(<Column column={modelColumn} onClick={
