@@ -1,3 +1,15 @@
+## 在浏览器中启动游戏
+ ```shell script
+git clone https://github.com/wang-zi-tao/react-demo.git
+cd react-demo
+npm start
+```
+## 构建桌面APP
+ ```shell script
+git clone https://github.com/wang-zi-tao/react-demo.git
+cd react-demo
+npm run-script package
+```
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
