@@ -168,7 +168,14 @@
       <option name="project" value="LOCAL" />
       <updated>1586005385223</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="修改README.md，添加package和electron-start的说明">
+      <created>1586005998356</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1586005998356</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -190,7 +197,8 @@
     <MESSAGE value="修复bug" />
     <MESSAGE value="添加electron打包功能" />
     <MESSAGE value="修改忽略规则" />
-    <option name="LAST_COMMIT_MESSAGE" value="修改忽略规则" />
+    <MESSAGE value="修改README.md，添加package和electron-start的说明" />
+    <option name="LAST_COMMIT_MESSAGE" value="修改README.md，添加package和electron-start的说明" />
   </component>
   <component name="WindowStateProjectService">
     <state x="2475" y="187" width="800" height="679" key="#ESLint" timestamp="1585839151647">
@@ -201,10 +209,10 @@
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="2613" y="272" width="524" height="505" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.34.1920.1046/1920.0.1920.1080@1920.0.1920.1080" timestamp="1585884880151" />
-    <state x="2440" y="88" width="870" height="873" key="CommitChangelistDialog2" timestamp="1586005385135">
+    <state x="2938" y="156" width="870" height="873" key="CommitChangelistDialog2" timestamp="1586005998294">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state x="2440" y="88" width="870" height="873" key="CommitChangelistDialog2/0.34.1920.1046/1920.0.1920.1080@1920.0.1920.1080" timestamp="1586005385135" />
+    <state x="2938" y="156" width="870" height="873" key="CommitChangelistDialog2/0.34.1920.1046/1920.0.1920.1080@1920.0.1920.1080" timestamp="1586005998294" />
     <state width="910" height="285" key="GridCell.Tab.0.bottom" timestamp="1585990356464">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
@@ -277,10 +285,10 @@
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="2361" y="159" width="1037" height="732" key="SettingsEditor/0.34.1920.1046/1920.0.1920.1080@1920.0.1920.1080" timestamp="1586004941577" />
-    <state x="2475" y="260" width="800" height="530" key="Vcs.Push.Dialog.v2" timestamp="1586005598404">
+    <state x="2475" y="260" width="800" height="530" key="Vcs.Push.Dialog.v2" timestamp="1586006023920">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state x="2475" y="260" width="800" height="530" key="Vcs.Push.Dialog.v2/0.34.1920.1046/1920.0.1920.1080@1920.0.1920.1080" timestamp="1586005598404" />
+    <state x="2475" y="260" width="800" height="530" key="Vcs.Push.Dialog.v2/0.34.1920.1046/1920.0.1920.1080@1920.0.1920.1080" timestamp="1586006023920" />
     <state x="2532" y="351" key="com.intellij.ide.util.TipDialog" timestamp="1585919281442">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
