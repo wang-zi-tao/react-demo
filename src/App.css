@@ -35,45 +35,47 @@
   child-align: middle;
 }
 .left{
-
-  /*display: inline-block;*/
-  /*background: #61dafb;*/
   flex: 6;
 }
 .right{
-  /*display: inline-block;*/
-  /*background: yellow;*/
   float: right;
   flex: 1;
 }
-/*.img-box:before {*/
-/*  content: "";*/
-/*  display: block;*/
-/*  padding-top: 100%;*/
-/*}*/
-
 .message{
   font-size: 50px;
 }
 img{
-  /*height: inherit;*/
   width: 100%;
+  animation: in 0.25s;
+}
+
+@keyframes in
+{
+  from {
+    opacity:0.0;
+    position: relative;
+    top: 250px;
+  }
+  to {
+    opacity:1.0;
+    position: relative;
+    top:0px;
+  }
 }
 .column{
-  /*max-height: 500px;*/
   flex: 1;
-  /*background: orange;*/
-
-  /*display:flex;*/
   flex-direction: column-reverse;
+}
+.column:hover{
+  background: rgba(255, 255, 255, 0.55);
+  overflow-y:visible;
 }
 .scene {
   overflow-y: auto;
   display:flex;
   flex: 1;
-  /*background: #67bff2;*/
 }
-.scene *{
+.scene .column{
   overflow-y: visible;
 }
 .scene{
@@ -81,16 +83,6 @@ img{
 article p{
   flex: 0;
 }
-/*article::before{*/
-/*  content: '';*/
-/*  position: absolute;*/
-/*  top: 0; right: 0; bottom: 0; left: 0;*/
-/*  z-index: -1;*/
-/*  filter: blur(20px);*/
-/*  margin: -20px;*/
-/*  background: url("./resources/background.jpg") fixed 0 center;*/
-/*  background-size: cover;*/
-/*}*/
 article{
   background: rgba(255, 255, 255, 0.52);
   overflow: hidden;
@@ -98,6 +90,10 @@ article{
   display: flex;
   flex-direction: column;
   height: 100%;
+}
+.right *{
+  position: center;
+  text-align: center;
 }
 .right div,.right span,.left,.right{
 
@@ -111,9 +107,16 @@ article{
   background-position: center;
   /*filter: blur(8px);*/
 }
-#root,body,html{
+#root,body,html {
   height: 100%;
+  font-family: -apple-system, BlinkMacSystemFont,'Twemoji Mozilla', 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+}
 
+button:hover{
+  background-color: #8db5f2;
+}
+button:checked{
+  background: #95e9fb;
 }
 button {
   background-color: #67bff2;
@@ -134,6 +137,16 @@ button {
   border-radius: 5px;
   margin: 0 auto;
   outline: 0;
+}
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 25px;
+  width: 25px;
+  margin-top: -5px; /*使滑块超出轨道部分的偏移量相等*/
+  background: #ffffff;
+  border-radius: 50%; /*外观设置为圆形*/
+  border: solid 0.125em rgba(205, 224, 230, 0.5); /*设置边框*/
+  box-shadow: 0 .125em .125em #3b4547; /*添加底部阴影*/
 }
 @keyframes App-logo-spin {
   from {

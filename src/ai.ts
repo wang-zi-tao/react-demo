@@ -1,10 +1,14 @@
 import {Model, ModelCell} from "./model";
+/**
+ *负责AI玩家的决策
+ */
 
 const plies=[4,7,7]
 interface Plan {
     nextColumn:number;
     max:number
 }
+//负责判断是否能再下一个棋子就赢
 function immediateWin(player:ModelCell,model:Model):number{
     let columnNum=model.columnNum
     for (let i=0;i<columnNum;i++){
@@ -20,30 +24,30 @@ function immediateWin(player:ModelCell,model:Model):number{
     }
     return NaN
 }
-
+//简单模式的启发式算法
 function heuristEasy(model: Model):number {
     return -heuristHard(model);
 }
-
+//中等模式的启发式算法
 function heuristMedium(model: Model):number {
-    return Math.random()*50;
+    return Math.random()*48+1;
 }
-
+//
 function allAdjacentEmpty(model: Model, i: number, j: number):boolean {
     const rowNum=model.rowNum
     const columnNum=model.columnNum
     for(let k=-1;k<=1;k++){
         for(let l=-1;l<=1;l++){
-            if(k==0&&l==0){
+            if(k===0&&l===0){
                 continue
             }
-            if(i+k>=0&&i+k<=rowNum&&model.get(i+k,j+k)!=undefined){}
+            if(i+k>=0&&i+k<=rowNum&&model.get(i+k,j+k)!==undefined){}
             return false
         }
     }
     return true
 }
-
+//统计已有的3个一线的情况
 function count3InRow(model: Model, player: ModelCell):number {
     const rowNum=model.rowNum
     const columnNum=model.columnNum
@@ -51,7 +55,7 @@ function count3InRow(model: Model, player: ModelCell):number {
     for(let i=0; i<columnNum; i++){
         const height=model.columns[i].cells.length
         for(let j=0;j<height;j++){
-            if(model.get(i,j)!=undefined){
+            if(model.get(i,j)!==undefined){
                 break
             }
             if(allAdjacentEmpty(model,i,j)){
@@ -60,21 +64,19 @@ function count3InRow(model: Model, player: ModelCell):number {
             if(!model.available(i)){
                 continue
             }
-            model.put(i,player)
-            if(model.win(player)){
+            if(model.winIfPut(i,j,player)){
                 count++
             }
-            model.pick(i)
         }
     }
     return count;
 }
-
+//困难模式的启发式算法
 function heuristHard(model: Model):number {
     const count=count3InRow(model,ModelCell.Human)
-    return count==0?Math.random()*50:count*100;
+    return count===0?Math.random()*48+1:count*100;
 }
-
+//启发式算法
 function heurist(level: number, model: Model):number{
     switch (level) {
         case 0:
@@ -87,14 +89,14 @@ function heurist(level: number, model: Model):number{
             throw new Error("invalid level:"+level)
     }
 }
-
+//递归式alpha-beta决策树算法
 function negamax(model:Model,player:ModelCell,height:number,alpha:number,beta:number,level:number,nextColumn:number):Plan {
-    if(height==0){
+    if(height===0||model.full()){
         switch (player) {
             case ModelCell.AI:
-                return {nextColumn:heurist(level,model),max:-32000}
+                return {max:heurist(level,model),nextColumn:nextColumn}
             case ModelCell.Human:
-                return {nextColumn:-heurist(level,model),max:-32000}
+                return {max:-heurist(level,model),nextColumn:nextColumn}
         }
     }
     let columnNum=model.columnNum
@@ -114,9 +116,9 @@ function negamax(model:Model,player:ModelCell,height:number,alpha:number,beta:nu
             temp=3200*height
         }
         else {
-            const plan=negamax(model,player==ModelCell.AI?ModelCell.Human:ModelCell.AI,height-1,-1*beta,-1*alpha,level,nextColumn)
+            const plan=negamax(model,player===ModelCell.AI?ModelCell.Human:ModelCell.AI,height-1,-1*beta,-1*alpha,level,nextColumn)
             nextColumn=plan.nextColumn
-            temp=plan.max
+            temp=-plan.max
         }
         model.pick(column)
         if(temp>max){
@@ -130,11 +132,12 @@ function negamax(model:Model,player:ModelCell,height:number,alpha:number,beta:nu
             break
         }
     }
-    if(height==plies[level]){
+    if(height===plies[level]){
         nextColumn=next
     }
     return {nextColumn:nextColumn,max:max}
 }
+//决策算法
 export function aiDecision(model:Model,level:number):number{
     let x=immediateWin(ModelCell.AI, model)
     if(!isNaN(x)){
@@ -147,6 +150,7 @@ export function aiDecision(model:Model,level:number):number{
     const plan=negamax(model,ModelCell.AI,plies[level],-32000,+32000,level,0)
     return plan.nextColumn
 }
+//AI下棋
 export function aiPlay(model:Model,level:number):boolean {
     const x=aiDecision(model, level)
     if(!model.available(x)){
