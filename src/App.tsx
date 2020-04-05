@@ -36,7 +36,7 @@ export class App extends React.Component<any, Status>{
               stop={this.state.stop}
               model={this.state.model}
               level={this.state.level}
-              changeStatus={(c)=>this.changeStatus(c)}
+              changeStatus={(c)=>this.setState(c)}
           />
 
         </article>
@@ -103,37 +103,34 @@ export class App extends React.Component<any, Status>{
     </div>)
   }
   newGame() {
-    this.setState((s:Status)=>Object.assign(s,{model:creatModel(s.columnNum,s.rowNum),stop:false,message:''}))
+    this.setState((s:Status)=>{return{model:creatModel(s.columnNum,s.rowNum),stop:false,message:''}})
   }
   onHumanWin(){
     let newValue=this.state.humanWinCount+1
-    this.setState((s:Status)=>Object.assign(s,{humanWinCount:newValue}))
+    this.setState({humanWinCount:newValue})
   }
   onAIWin(){
     let newValue=this.state.aiWinCount+1
-    this.setState((s:Status)=>{Object.assign(s,{aiWinCount:newValue})})
+    this.setState({aiWinCount:newValue})
   }
   onDraw(){
     let newValue=this.state.drawCount+1
-    this.setState((s:Status)=>Object.assign(s,{drawCount:newValue}))
+    this.setState({drawCount:newValue})
   }
   onChangeRowNum(w:number){
     if(w>this.state.rowNum){
       this.onChangeColumnNum(w)
     }
-    this.setState((s:Status)=> Object.assign(s,{rowNum:w}))
+    this.setState({rowNum:w})
   }
   onChangeColumnNum(w:number){
     if(w<this.state.rowNum){
       this.onChangeRowNum(w)
     }
-    this.setState((s:Status)=> Object.assign(s,{columnNum:w}))
+    this.setState({columnNum:w})
   }
   setLevel(level:number){
-    this.setState((s:Status)=>Object.assign(s,{level:level}))
-  }
-  changeStatus(change:any){
-    this.setState((s:Status)=>Object.assign(s,change))
+    this.setState({level:level})
   }
 }
 

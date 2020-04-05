@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="fe9600eb-eb89-47f8-b265-11d9d118b331" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scene.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/scene.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -139,6 +139,8 @@
       <workItem from="1585914343616" duration="5000" />
       <workItem from="1585917742620" duration="5000" />
       <workItem from="1585919280762" duration="5000" />
+      <workItem from="1586050089367" duration="1722000" />
+      <workItem from="1586089123377" duration="570000" />
     </task>
     <task id="LOCAL-00001" summary="构建react web项目">
       <created>1585926989566</created>
@@ -182,7 +184,21 @@
       <option name="project" value="LOCAL" />
       <updated>1586006075192</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="清楚注释掉的代码">
+      <created>1586006489754</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1586006489754</updated>
+    </task>
+    <task id="LOCAL-00008" summary="添加启动和打包说明">
+      <created>1586010361478</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1586010361478</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -193,7 +209,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
@@ -205,7 +223,9 @@
     <MESSAGE value="添加electron打包功能" />
     <MESSAGE value="修改忽略规则" />
     <MESSAGE value="修改README.md，添加package和electron-start的说明" />
-    <option name="LAST_COMMIT_MESSAGE" value="修改README.md，添加package和electron-start的说明" />
+    <MESSAGE value="清楚注释掉的代码" />
+    <MESSAGE value="添加启动和打包说明" />
+    <option name="LAST_COMMIT_MESSAGE" value="添加启动和打包说明" />
   </component>
   <component name="WindowStateProjectService">
     <state x="2475" y="187" width="800" height="679" key="#ESLint" timestamp="1585839151647">
@@ -216,26 +236,30 @@
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="2613" y="272" width="524" height="505" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.34.1920.1046/1920.0.1920.1080@1920.0.1920.1080" timestamp="1585884880151" />
-    <state x="2938" y="156" width="870" height="873" key="CommitChangelistDialog2" timestamp="1586006075134">
+    <state x="2727" y="148" width="870" height="873" key="CommitChangelistDialog2" timestamp="1586010361425">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state x="2938" y="156" width="870" height="873" key="CommitChangelistDialog2/0.34.1920.1046/1920.0.1920.1080@1920.0.1920.1080" timestamp="1586006075134" />
-    <state width="910" height="285" key="GridCell.Tab.0.bottom" timestamp="1585990356464">
+    <state x="2727" y="148" width="870" height="873" key="CommitChangelistDialog2/0.34.1920.1046/1920.0.1920.1080@1920.0.1920.1080" timestamp="1586010361425" />
+    <state x="2020" y="68" width="1720" height="912" key="DiffContextDialog" timestamp="1586006933099">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state width="910" height="285" key="GridCell.Tab.0.bottom/0.34.1920.1046/1920.0.1920.1080@1920.0.1920.1080" timestamp="1585990356464" />
-    <state width="910" height="285" key="GridCell.Tab.0.center" timestamp="1585990356464">
+    <state x="2020" y="68" width="1720" height="912" key="DiffContextDialog/0.34.1920.1046/1920.0.1920.1080@1920.0.1920.1080" timestamp="1586006933099" />
+    <state width="1870" height="285" key="GridCell.Tab.0.bottom" timestamp="1586088928265">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state width="910" height="285" key="GridCell.Tab.0.center/0.34.1920.1046/1920.0.1920.1080@1920.0.1920.1080" timestamp="1585990356464" />
-    <state width="910" height="285" key="GridCell.Tab.0.left" timestamp="1585990356464">
+    <state width="1870" height="285" key="GridCell.Tab.0.bottom/0.34.1920.1046/1920.0.1920.1080@1920.0.1920.1080" timestamp="1586088928265" />
+    <state width="1870" height="285" key="GridCell.Tab.0.center" timestamp="1586088928265">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state width="910" height="285" key="GridCell.Tab.0.left/0.34.1920.1046/1920.0.1920.1080@1920.0.1920.1080" timestamp="1585990356464" />
-    <state width="910" height="285" key="GridCell.Tab.0.right" timestamp="1585990356464">
+    <state width="1870" height="285" key="GridCell.Tab.0.center/0.34.1920.1046/1920.0.1920.1080@1920.0.1920.1080" timestamp="1586088928265" />
+    <state width="1870" height="285" key="GridCell.Tab.0.left" timestamp="1586088928264">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state width="910" height="285" key="GridCell.Tab.0.right/0.34.1920.1046/1920.0.1920.1080@1920.0.1920.1080" timestamp="1585990356464" />
+    <state width="1870" height="285" key="GridCell.Tab.0.left/0.34.1920.1046/1920.0.1920.1080@1920.0.1920.1080" timestamp="1586088928264" />
+    <state width="1870" height="285" key="GridCell.Tab.0.right" timestamp="1586088928265">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1870" height="285" key="GridCell.Tab.0.right/0.34.1920.1046/1920.0.1920.1080@1920.0.1920.1080" timestamp="1586088928265" />
     <state width="1870" height="365" key="GridCell.Tab.1.bottom" timestamp="1585969432579">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
@@ -292,21 +316,21 @@
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="2361" y="159" width="1037" height="732" key="SettingsEditor/0.34.1920.1046/1920.0.1920.1080@1920.0.1920.1080" timestamp="1586004941577" />
-    <state x="2475" y="260" width="800" height="530" key="Vcs.Push.Dialog.v2" timestamp="1586006151306">
+    <state x="2475" y="260" width="800" height="530" key="Vcs.Push.Dialog.v2" timestamp="1586010380340">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state x="2475" y="260" width="800" height="530" key="Vcs.Push.Dialog.v2/0.34.1920.1046/1920.0.1920.1080@1920.0.1920.1080" timestamp="1586006151306" />
-    <state x="2532" y="351" key="com.intellij.ide.util.TipDialog" timestamp="1585919281442">
+    <state x="2475" y="260" width="800" height="530" key="Vcs.Push.Dialog.v2/0.34.1920.1046/1920.0.1920.1080@1920.0.1920.1080" timestamp="1586010380340" />
+    <state x="2532" y="351" key="com.intellij.ide.util.TipDialog" timestamp="1586050090015">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state x="2532" y="351" key="com.intellij.ide.util.TipDialog/0.34.1920.1046/1920.0.1920.1080@1920.0.1920.1080" timestamp="1585919281442" />
+    <state x="2532" y="351" key="com.intellij.ide.util.TipDialog/0.34.1920.1046/1920.0.1920.1080@1920.0.1920.1080" timestamp="1586050090015" />
     <state x="2544" y="238" key="run.anything.popup" timestamp="1585923203003">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="2544" y="238" key="run.anything.popup/0.34.1920.1046/1920.0.1920.1080@1920.0.1920.1080" timestamp="1585923203003" />
-    <state x="2605" y="352" width="540" height="346" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1585979481698">
+    <state x="2605" y="352" width="540" height="346" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1586050730769">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state x="2605" y="352" width="540" height="346" key="vcs.readOnlyHandler.ReadOnlyStatusDialog/0.34.1920.1046/1920.0.1920.1080@1920.0.1920.1080" timestamp="1585979481698" />
+    <state x="2605" y="352" width="540" height="346" key="vcs.readOnlyHandler.ReadOnlyStatusDialog/0.34.1920.1046/1920.0.1920.1080@1920.0.1920.1080" timestamp="1586050730769" />
   </component>
 </project>
