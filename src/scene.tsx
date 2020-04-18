@@ -48,8 +48,9 @@ function humanPlay(changeStatus: (change: any) => void,
 /**
  * 棋子
  */
-export class Cell extends React.Component<{ cell: ModelCell }, any> {
+export class Cell extends React.PureComponent<{ cell: ModelCell }, any> {
     render(): any {
+        console.log("cell")
         switch (this.props.cell) {
             case ModelCell.AI:
                 return <img src={imageAI} className={'cell'}/>
