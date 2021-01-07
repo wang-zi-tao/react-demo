@@ -11,5 +11,6 @@ module.exports = {
         'ts-jest':{
             verbose:true
         }
-    }
+    },
+    collectCoverage: true,
 };
