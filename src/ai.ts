@@ -1,4 +1,4 @@
-import {Model, ModelCell} from "./model";
+import { Model, ModelCell } from "./model";
 /**
  *负责AI玩家的决策
  */
@@ -9,7 +9,7 @@ interface Plan {
     max:number
 }
 //负责判断是否能再下一个棋子就赢
-function immediateWin(player:ModelCell,model:Model):number{
+export function immediateWin(player:ModelCell,model:Model):number{
     let columnNum=model.columnNum
     for (let i=0;i<columnNum;i++){
         if(!model.available(i)){
@@ -25,15 +25,15 @@ function immediateWin(player:ModelCell,model:Model):number{
     return NaN
 }
 //简单模式的启发式算法
-function heuristEasy(model: Model):number {
+export function heuristEasy(model: Model):number {
     return -heuristHard(model);
 }
 //中等模式的启发式算法
-function heuristMedium(model: Model):number {
+export function heuristMedium(model: Model):number {
     return Math.random()*48+1;
 }
 //
-function allAdjacentEmpty(model: Model, i: number, j: number):boolean {
+export function allAdjacentEmpty(model: Model, i: number, j: number):boolean {
     const rowNum=model.rowNum
     const columnNum=model.columnNum
     for(let k=-1;k<=1;k++){
@@ -48,15 +48,15 @@ function allAdjacentEmpty(model: Model, i: number, j: number):boolean {
     return true
 }
 //统计已有的3个一线的情况
-function count3InRow(model: Model, player: ModelCell):number {
+export function count3InRow(model: Model, player: ModelCell):number {
     const rowNum=model.rowNum
     const columnNum=model.columnNum
     let count=0
     for(let i=0; i<columnNum; i++){
         const height=model.columns[i].cells.length
-        for(let j=0;j<height;j++){
+        for(let j=height;j<rowNum;j++){
             if(model.get(i,j)!==undefined){
-                break
+                continue
             }
             if(allAdjacentEmpty(model,i,j)){
                 continue
@@ -72,12 +72,12 @@ function count3InRow(model: Model, player: ModelCell):number {
     return count;
 }
 //困难模式的启发式算法
-function heuristHard(model: Model):number {
+export function heuristHard(model: Model):number {
     const count=count3InRow(model,ModelCell.Human)
     return count===0?Math.random()*48+1:count*100;
 }
 //启发式算法
-function heurist(level: number, model: Model):number{
+export function heurist(level: number, model: Model):number{
     switch (level) {
         case 0:
             return heuristEasy(model)
@@ -90,7 +90,7 @@ function heurist(level: number, model: Model):number{
     }
 }
 //递归式alpha-beta决策树算法
-function negamax(model:Model,player:ModelCell,height:number,alpha:number,beta:number,level:number,nextColumn:number):Plan {
+export function negamax(model:Model,player:ModelCell,height:number,alpha:number,beta:number,level:number,nextColumn:number):Plan {
     if(height===0||model.full()){
         switch (player) {
             case ModelCell.AI:
