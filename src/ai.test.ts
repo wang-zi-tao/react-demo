@@ -442,7 +442,7 @@ test('递归式alpha-beta决策树算法/白盒测试/路径覆盖/[93,102,105,1
         /*beta*/ 0,
         /*难度*/ 1,
         /*选择*/ 3).nextColumn)
-        .toBeDefined();
+        .toBe(3);
 })
 test('递归式alpha-beta决策树算法/白盒测试/路径覆盖/[93,102,105,106,110,114,119,123,128,131,105]', () => {
     expect(negamax(new Model(
@@ -464,7 +464,7 @@ test('递归式alpha-beta决策树算法/白盒测试/路径覆盖/[93,102,105,1
         /*beta*/ 32000000,
         /*难度*/ 1,
         /*选择*/ 3).nextColumn)
-        .toBeDefined();
+        .toBe(3);
 })
 test('递归式alpha-beta决策树算法/白盒测试/路径覆盖/[93,102,105,106,110,114,119,123,128,129,131,105]', () => {
     expect(negamax(new Model(
@@ -486,7 +486,7 @@ test('递归式alpha-beta决策树算法/白盒测试/路径覆盖/[93,102,105,1
         /*beta*/ 32000000,
         /*难度*/ 1,
         /*选择*/ 3).nextColumn)
-        .toBeDefined();
+        .toBe(3);
 })
 test('递归式alpha-beta决策树算法/白盒测试/路径覆盖/[93,102,105,106,110,114,119,123,125,128,131,105]', () => {
     expect(negamax(new Model(
@@ -508,7 +508,7 @@ test('递归式alpha-beta决策树算法/白盒测试/路径覆盖/[93,102,105,1
         /*beta*/ 32000000,
         /*难度*/ 1,
         /*选择*/ 3).nextColumn)
-        .toBeDefined();
+        .toBe(3);
 })
 test('递归式alpha-beta决策树算法/白盒测试/路径覆盖/[93,102,105,106,110,114,119,123,125,128,129,131,105]', () => {
     expect(negamax(new Model(
@@ -530,7 +530,7 @@ test('递归式alpha-beta决策树算法/白盒测试/路径覆盖/[93,102,105,1
         /*beta*/ 32000000,
         /*难度*/ 1,
         /*选择*/ 3).nextColumn)
-        .toBeDefined();
+        .toBe(3);
 })
 test('递归式alpha-beta决策树算法/白盒测试/路径覆盖/[93,102,105,106,110,114,116,123,128,131,105]', () => {
 
@@ -553,7 +553,7 @@ test('递归式alpha-beta决策树算法/白盒测试/路径覆盖/[93,102,105,1
         /*beta*/ 32000000,
         /*难度*/ 1,
         /*选择*/ 3).nextColumn)
-        .toBeDefined();
+        .toBe(3);
 })
 test('递归式alpha-beta决策树算法/白盒测试/路径覆盖/[93,102,105,106,110,114,116,123,128,129,131,105]', () => {
     expect(negamax(new Model(
@@ -575,7 +575,7 @@ test('递归式alpha-beta决策树算法/白盒测试/路径覆盖/[93,102,105,1
         /*beta*/ 32000000,
         /*难度*/ 1,
         /*选择*/ 3).nextColumn)
-        .toBeDefined();
+        .toBe(3);
 })
 test('递归式alpha-beta决策树算法/白盒测试/路径覆盖/[93,102,105,106,110,114,116,123,125,128,131,105]', () => {
     expect(negamax(new Model(
@@ -597,7 +597,7 @@ test('递归式alpha-beta决策树算法/白盒测试/路径覆盖/[93,102,105,1
         /*beta*/ 32000000,
         /*难度*/ 1,
         /*选择*/ 3).nextColumn)
-        .toBeDefined();
+        .toBe(3);
 })
 test('递归式alpha-beta决策树算法/白盒测试/路径覆盖/[93,102,105,106,110,114,116,123,125,128,129,131,105]', () => {
 
@@ -620,7 +620,7 @@ test('递归式alpha-beta决策树算法/白盒测试/路径覆盖/[93,102,105,1
         /*beta*/ 32000000,
         /*难度*/ 1,
         /*选择*/ 3).nextColumn)
-        .toBeDefined();
+        .toBe(3);
 })
 test('递归式alpha-beta决策树算法/白盒测试/路径覆盖/[93,102,105,135,138]', () => {
     expect(negamax(new Model(
@@ -636,7 +636,7 @@ test('递归式alpha-beta决策树算法/白盒测试/路径覆盖/[93,102,105,1
         /*beta*/ 32000000,
         /*难度*/ 1,
         /*选择*/ 3).nextColumn)
-        .toBeDefined();
+        .toBe(3);
 })
 test('递归式alpha-beta决策树算法/白盒测试/路径覆盖/[93,102,105,135,136,138]', () => {
     expect(negamax(new Model(
@@ -652,5 +652,247 @@ test('递归式alpha-beta决策树算法/白盒测试/路径覆盖/[93,102,105,1
         /*beta*/ 32000000,
         /*难度*/ 1,
         /*选择*/ 3).nextColumn)
-        .toBeDefined();
+        .toBe(3);
+})
+test('ai下棋/黑盒测试/有效等价类', () => {
+    expect(aiPlay(new Model(
+        7,
+        7,
+        [
+            new ModelColumn([Human, Human]),
+            new ModelColumn([]),
+            new ModelColumn([]),
+            new ModelColumn([AI, AI, AI]),
+            new ModelColumn([]),
+            new ModelColumn([]),
+            new ModelColumn([Human, Human]),
+        ]
+    ), 1)).toBe(true)
+    expect(aiPlay(new Model(
+        4,
+        4,
+        [
+            new ModelColumn([Human, AI, Human, Human]),
+            new ModelColumn([Human, Human, Human, AI]),
+            new ModelColumn([Human, Human, AI, Human]),
+            new ModelColumn([AI, Human, Human, Human]),
+        ]
+    ), 1)).toBe(false)
+    expect(aiPlay(new Model(
+        7,
+        7,
+        [
+            new ModelColumn([Human, Human]),
+            new ModelColumn([]),
+            new ModelColumn([]),
+            new ModelColumn([AI, AI, AI]),
+            new ModelColumn([]),
+            new ModelColumn([]),
+            new ModelColumn([Human, Human]),
+        ]
+    ), 0)).toBe(true)
+    expect(aiPlay(new Model(
+        7,
+        7,
+        [
+            new ModelColumn([Human, Human]),
+            new ModelColumn([]),
+            new ModelColumn([]),
+            new ModelColumn([AI, AI, AI]),
+            new ModelColumn([]),
+            new ModelColumn([]),
+            new ModelColumn([Human, Human]),
+        ]
+    ), 2)).toBe(true)
+})
+test('ai下棋/黑盒测试/无效等价类', () => {
+    expect(aiPlay(new Model(
+        -7,
+        7,
+        [
+            new ModelColumn([Human, Human]),
+            new ModelColumn([]),
+            new ModelColumn([]),
+            new ModelColumn([AI, AI, AI]),
+            new ModelColumn([]),
+            new ModelColumn([]),
+            new ModelColumn([Human, Human]),
+        ]
+    ), 1)).toBe(true)
+    expect(aiPlay(new Model(
+        7.7,
+        7,
+        [
+            new ModelColumn([Human, Human]),
+            new ModelColumn([]),
+            new ModelColumn([]),
+            new ModelColumn([AI, AI, AI]),
+            new ModelColumn([]),
+            new ModelColumn([]),
+            new ModelColumn([Human, Human]),
+        ]
+    ), 1)).toBe(true)
+    expect(aiPlay(new Model(
+        7,
+        -7,
+        [
+            new ModelColumn([Human, Human]),
+            new ModelColumn([]),
+            new ModelColumn([]),
+            new ModelColumn([AI, AI, AI]),
+            new ModelColumn([]),
+            new ModelColumn([]),
+            new ModelColumn([Human, Human]),
+        ]
+    ), 1)).toBe(false)
+    expect(aiPlay(new Model(
+        7,
+        7.7,
+        [
+            new ModelColumn([Human, Human]),
+            new ModelColumn([]),
+            new ModelColumn([]),
+            new ModelColumn([AI, AI, AI]),
+            new ModelColumn([]),
+            new ModelColumn([]),
+            new ModelColumn([Human, Human]),
+        ]
+    ), 1)).toBe(true)
+    expect(aiPlay(new Model(
+        12,
+        7,
+        [
+            new ModelColumn([Human, Human]),
+            new ModelColumn([]),
+            new ModelColumn([]),
+            new ModelColumn([AI, AI, AI]),
+            new ModelColumn([]),
+            new ModelColumn([]),
+            new ModelColumn([Human, Human]),
+        ]
+    ), 1)).toBe(true)
+    expect(aiPlay(new Model(
+        7,
+        7,
+        [
+            new ModelColumn([Human, Human]),
+            new ModelColumn([]),
+            new ModelColumn([]),
+            new ModelColumn([AI, AI, AI]),
+            new ModelColumn([]),
+            new ModelColumn([]),
+            new ModelColumn([Human, Human]),
+        ]
+    ), 3)).toBe(true)
+})
+
+
+test('ai下棋/黑盒测试/边界值分析/Model.columnNum', () => {
+    expect(aiPlay(new Model(
+        -1,
+        7,
+        [
+            new ModelColumn([Human, Human]),
+            new ModelColumn([]),
+            new ModelColumn([]),
+            new ModelColumn([AI, AI, AI]),
+            new ModelColumn([]),
+            new ModelColumn([]),
+            new ModelColumn([Human, Human]),
+        ]
+    ), 1)).toBe(true)
+    expect(aiPlay(new Model(
+        0,
+        7,
+        [
+            new ModelColumn([Human, Human]),
+            new ModelColumn([]),
+            new ModelColumn([]),
+            new ModelColumn([AI, AI, AI]),
+            new ModelColumn([]),
+            new ModelColumn([]),
+            new ModelColumn([Human, Human]),
+        ]
+    ), 1)).toBe(true)
+    expect(aiPlay(new Model(
+        1,
+        7,
+        [
+            new ModelColumn([Human, Human]),
+            new ModelColumn([]),
+            new ModelColumn([]),
+            new ModelColumn([AI, AI, AI]),
+            new ModelColumn([]),
+            new ModelColumn([]),
+            new ModelColumn([Human, Human]),
+        ]
+    ), 1)).toBe(true)
+    expect(aiPlay(new Model(
+        7,
+        7,
+        [
+            new ModelColumn([Human, Human]),
+            new ModelColumn([]),
+            new ModelColumn([]),
+            new ModelColumn([AI, AI, AI]),
+            new ModelColumn([]),
+            new ModelColumn([]),
+            new ModelColumn([Human, Human]),
+        ]
+    ), 1)).toBe(true)
+})
+
+test('ai下棋/黑盒测试/边界值分析/Model.rawNum', () => {
+    expect(aiPlay(new Model(
+        7,
+        -1,
+        [
+            new ModelColumn([Human, Human]),
+            new ModelColumn([]),
+            new ModelColumn([]),
+            new ModelColumn([AI, AI, AI]),
+            new ModelColumn([]),
+            new ModelColumn([]),
+            new ModelColumn([Human, Human]),
+        ]
+    ), 1)).toBe(false)
+    expect(aiPlay(new Model(
+        7,
+        0,
+        [
+            new ModelColumn([Human, Human]),
+            new ModelColumn([]),
+            new ModelColumn([]),
+            new ModelColumn([AI, AI, AI]),
+            new ModelColumn([]),
+            new ModelColumn([]),
+            new ModelColumn([Human, Human]),
+        ]
+    ), 1)).toBe(false)
+    expect(aiPlay(new Model(
+        7,
+        1,
+        [
+            new ModelColumn([Human, Human]),
+            new ModelColumn([]),
+            new ModelColumn([]),
+            new ModelColumn([AI, AI, AI]),
+            new ModelColumn([]),
+            new ModelColumn([]),
+            new ModelColumn([Human, Human]),
+        ]
+    ), 1)).toBe(false)
+    expect(aiPlay(new Model(
+        7,
+        7,
+        [
+            new ModelColumn([Human, Human]),
+            new ModelColumn([]),
+            new ModelColumn([]),
+            new ModelColumn([AI, AI, AI]),
+            new ModelColumn([]),
+            new ModelColumn([]),
+            new ModelColumn([Human, Human]),
+        ]
+    ), 1)).toBe(true)
 })
