@@ -41,8 +41,10 @@ export function allAdjacentEmpty(model: Model, i: number, j: number):boolean {
             if(k===0&&l===0){
                 continue
             }
-            if(i+k>=0&&i+k<=rowNum&&model.get(i+k,j+k)!==undefined){}
-            return false
+            if(i+k>=0&&i+k<=rowNum&&model.get(i+k,j+k)!==undefined){
+                return false
+            }
+            
         }
     }
     return true
